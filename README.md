@@ -3,6 +3,9 @@
 ## Overview
 The Weather App is a Django-based web application that provides weather information for various locations. Users can input a city name to retrieve the current weather conditions for that location.
 
+<img width="1448" height="840" alt="Screenshot 2026-02-23 175141" src="https://github.com/user-attachments/assets/5781ecb2-6063-4af4-937c-dc0f10d54129" />
+
+
 ## Features
 - Search for current weather by city name.
 - Display weather details such as temperature, humidity, and weather conditions.
