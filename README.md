@@ -8,34 +8,6 @@ The Weather App is a Django-based web application that provides weather informat
 - Display weather details such as temperature, humidity, and weather conditions.
 - User-friendly interface with a responsive design.
 
-## Project Structure
-```
-db.sqlite3
-manage.py
-weather/
-	__init__.py
-	admin.py
-	apps.py
-	models.py
-	tests.py
-	urls.py
-	views.py
-	__pycache__/
-	migrations/
-		__init__.py
-		some_migration_files.py
-	templates/
-		weather/
-			weather.html
-weather_project/
-	__init__.py
-	asgi.py
-	settings.py
-	urls.py
-	wsgi.py
-	__pycache__/
-```
-
 ### Key Files
 - **manage.py**: Entry point for the Django project.
 - **weather/**: Contains the main application code, including models, views, and templates.
@@ -102,13 +74,6 @@ Contributions are welcome! Please follow these steps:
    ```
 5. Open a pull request.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
 ## Acknowledgments
 - [Django Documentation](https://docs.djangoproject.com/)
 - [OpenWeatherMap API](https://openweathermap.org/api) for providing weather data.
-
----
-
-Feel free to customize this README file further to suit your project!
