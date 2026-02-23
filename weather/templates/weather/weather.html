@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .weather-container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .weather-container h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .weather-container p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .temperature {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .cold {
+            color: #1E90FF; /* Blue for cold temperatures */
+        }
+        .hot {
+            color: #ff4500; /* Red for hot temperatures */
+        }
+        form {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 70%;
+            margin-right: 10px; /* Space between text box and button */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <form method="get">
+            <input type="text" name="city" placeholder="Enter city name" required>
+            <button type="submit">Search</button>
+        </form>
+
+        {% if city %}
+            <h1>Weather in {{ city }}</h1>
+            <p class="temperature {% if is_cold %}cold{% else %}hot{% endif %}">{{ temperature }}</p>
+            <p>Feels like: {{ feels_like }}</p>
+            <p>Condition: {{ weather }}</p>
+            <p>Humidity: {{ humidity }}</p>
+            <p>Wind Speed: {{ wind_speed }}</p>
+            <p>Sunrise: {{ sunrise }}</p>
+            <p>Sunset: {{ sunset }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
